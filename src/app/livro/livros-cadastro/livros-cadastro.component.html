@@ -1,0 +1,30 @@
+<p-toast></p-toast>
+
+<div class="container">
+    <form #f="ngForm" autocomplete="off" (ngSubmit)="salvar(f)">
+        <div class="ui-g">
+
+            <div class="ui-g-12">
+              <h1>{{editando?'Edicão de ': 'Nova '}} Livro</h1>
+            </div>
+
+            <div class="ui-g-12 ui-md-9 ui-fluid">
+              <label>Descrição</label>
+              <input pInputText type="text" name="titulo"
+                [(ngModel)]="livros.lv"
+                #uf="ngModel" required minlength="3">
+
+                <div *ngIf="uf.hasError('required') && uf.touched">Informe um nome</div>
+                <div *ngIf="uf.hasError('minlength')">O nome deve ter no mínimo 3 caractares</div>
+            </div>
+
+            <div class="ui-g-12">
+                <button pButton type="submit" label="Salvar" [disabled]="f.invalid" class=" boxButton"></button>
+                <a pButton type="button" label="Novo" class="ui-button-info" class=" boxButton"  routerLink="/livros/novo"></a>
+                <a routerLink="/livros">Voltar para a pesquisa</a>
+            </div>
+
+
+        </div>
+    </form>
+</div>
