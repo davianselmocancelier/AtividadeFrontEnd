@@ -1,6 +1,4 @@
 import { Livro } from './model';
-
-
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
