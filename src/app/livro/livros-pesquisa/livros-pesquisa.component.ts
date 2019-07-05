@@ -1,7 +1,6 @@
-import { LivrosService } from './../livros.service';
 import { MessageService, ConfirmationService } from 'primeng/api';
 import { Component, OnInit } from '@angular/core';
-
+import { LivrosService } from './../livros.service';
 @Component({
   selector: 'app-livros-pesquisa',
   templateUrl: './livros-pesquisa.component.html',
@@ -31,7 +30,7 @@ export class livrosPesquisaComponent implements OnInit {
 
   confirmaExclusao(livro:any){
 this.conf.confirm({
-  message: 'Tem certeza que deseja excluir?' + livro.uf+'?',
+  message: 'Tem certeza que deseja excluir?' + livro.id+'?',
   accept: ()=> {
   this.excluir(livro);
 }
@@ -42,7 +41,7 @@ this.conf.confirm({
     this.service.excluir(livro.id)
     .then(()=>{
       this.pesquisar();
-      this.msgService.add({severity:'success', summary:'Exclusão', detail:'livro '+livro.nome+' excluída com sucesso'});
+      this.msgService.add({severity:'success', summary:'Exclusão', detail:'Livro '+livro.titulo+' excluída com sucesso'});
     });
   }
 

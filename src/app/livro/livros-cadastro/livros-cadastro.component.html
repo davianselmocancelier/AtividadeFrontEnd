@@ -10,12 +10,12 @@
 
             <div class="ui-g-12 ui-md-9 ui-fluid">
               <label>Descrição</label>
-              <input pInputText type="text" name="titulo"
-                [(ngModel)]="livros.lv"
+              <input pInputText type="text" name="id"
+                [(ngModel)]="livros.id"
                 #uf="ngModel" required minlength="3">
 
-                <div *ngIf="uf.hasError('required') && uf.touched">Informe um nome</div>
-                <div *ngIf="uf.hasError('minlength')">O nome deve ter no mínimo 3 caractares</div>
+                <div *ngIf="id.hasError('required') && id.touched">Informe um nome</div>
+                <div *ngIf="id.hasError('minlength')">O nome deve ter no mínimo 3 caractares</div>
             </div>
 
             <div class="ui-g-12">

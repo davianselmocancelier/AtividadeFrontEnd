@@ -35,9 +35,10 @@ rejectLabel="Não"></p-confirmDialog>
           </ng-template>
 
           <ng-template pTemplate = "body" let-livro>
+
             <tr>
               <td class = "col-id">{{livro.id}}</td>
-
+              <td class = "col-id">{{livro.titulo}}</td>
               <td class = "col-acoes">
                 <button pButton icon="pi pi-pencil" pTooltip="Editar"  tooltipPosition="top" showDelay="1000"  class="ui-button-info" [routerLink]="['/livros/',livro.id]"></button>
 

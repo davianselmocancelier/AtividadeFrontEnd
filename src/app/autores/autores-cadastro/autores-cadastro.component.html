@@ -17,6 +17,7 @@
             </div>
             <div class="ui-g-12 ui-md-9 ui-fluid">
                 <label>ID</label>
+                <input pInputText type="text" id="id" [(ngModel)]="autores.ID" #nome="ngModel" required minlength="3">
               <p-dropdown [options]="livros"
                 [(ngModel)]="autores.livro.id"
                 name="id" [filter]="true">
@@ -25,8 +26,8 @@
             </div>
 
             <div class="ui-g-12">
-              <button pButton type="submit" label="Salvar" [disabled]="f.invalid" class=" boxButton"></button>
-              <button pButton type="button" label="Novo" class="ui-button-info" class=" boxButton" routerLink="/autores"></button>
+              <button pButton type="submit" label="Salvar" [disabled]="f.invalid" class=" boxButton" style="height:40px" >Salvar</button>
+              <button pButton type="button" label="Novo" class="ui-button-info" class=" boxButton" routerLink="/autores" style="height:40px">Novo</button>
             </div>
         </div>
     </form>

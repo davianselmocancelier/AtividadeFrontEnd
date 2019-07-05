@@ -9,8 +9,8 @@ import {TableModule} from 'primeng/table';
 import {TooltipModule} from 'primeng/tooltip';
 import { RouterModule } from '@angular/router';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
-import { LivrosService } from './livros.service';
 
+import { LivrosService } from './livros.service';
 import { LivrosCadastroComponent } from './livros-cadastro/livros-cadastro.component';
 import { livrosPesquisaComponent } from './Livros-pesquisa/Livros-pesquisa.component';
 

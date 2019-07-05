@@ -2,9 +2,8 @@ import { FormControl } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 import { Component , OnInit } from '@angular/core';
 import { LivrosService } from '../livros.service';
-import { ActivatedRoute }from '@angular/router';
 import { Livro} from './../model';
-
+import { ActivatedRoute }from '@angular/router';
 
 
 @Component({
